@@ -43,4 +43,4 @@ build_and_push_to_docker_hub:
         with:
           push: true
           tags: grishik/grishik/16sprint:v1
-          # Пуш образа в Docker Hub
+          # Пуш образа в Docker Hu
