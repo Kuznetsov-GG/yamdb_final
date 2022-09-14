@@ -41,6 +41,7 @@ build_and_push_to_docker_hub:
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2 
         with:
+          context: ./api_yamdb
+          file: ./api_yamdb/Dockerfile
           push: true
-          tags: grishik/16sprint:v1
-          # Пуш образа в Docker Hu
+          tags: ${{ secrets.DOCKER_USERNAME }}/api_yamdb:latest
