@@ -1,4 +1,3 @@
-from api_yamdb.settings import DEFAULT_FROM_EMAIL
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
 from django_filters.rest_framework import DjangoFilterBackend
@@ -14,6 +13,7 @@ from rest_framework_simplejwt.tokens import AccessToken
 from reviews.models import Category, Genre, Review, Title, User
 
 
+from api_yamdb.settings import DEFAULT_FROM_EMAIL
 from .filters import TitleFilter
 from .mixins import CreateListDestroyViewSet
 from .permissions import AdminOrReadOnly, IsAdmin, UserModeratorAdminOrReadOnly
