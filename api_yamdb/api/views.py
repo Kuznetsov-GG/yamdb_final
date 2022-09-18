@@ -1,4 +1,3 @@
-from api_yamdb.settings import DEFAULT_FROM_EMAIL
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
 from django_filters.rest_framework import DjangoFilterBackend
@@ -21,6 +20,7 @@ from .serializers import (CategorySerializer, CodeSerializer,
                           CommentSerializer, GenreSerializer,
                           ReadTitleSerializer, ReviewSerializer,
                           SignUpSerializer, TitleSerializer, UserSerializer)
+from api_yamdb.settings import DEFAULT_FROM_EMAIL
 
 
 class SignUp(APIView):
