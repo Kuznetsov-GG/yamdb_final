@@ -1,7 +1,8 @@
 import os
 from datetime import timedelta
-from dotenv import load_dotenv
 from distutils.util import strtobool
+
+from dotenv import load_dotenv
 
 load_dotenv()
 
