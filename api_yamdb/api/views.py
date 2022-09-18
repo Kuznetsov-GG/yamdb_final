@@ -12,7 +12,6 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import AccessToken
 from reviews.models import Category, Genre, Review, Title, User
-
 from .filters import TitleFilter
 from .mixins import CreateListDestroyViewSet
 from .permissions import AdminOrReadOnly, IsAdmin, UserModeratorAdminOrReadOnly
