@@ -1,3 +1,4 @@
+from api_yamdb.settings import DEFAULT_FROM_EMAIL
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
 from django_filters.rest_framework import DjangoFilterBackend
@@ -12,7 +13,6 @@ from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import AccessToken
 from reviews.models import Category, Genre, Review, Title, User
 
-
 from .filters import TitleFilter
 from .mixins import CreateListDestroyViewSet
 from .permissions import AdminOrReadOnly, IsAdmin, UserModeratorAdminOrReadOnly
@@ -20,7 +20,6 @@ from .serializers import (CategorySerializer, CodeSerializer,
                           CommentSerializer, GenreSerializer,
                           ReadTitleSerializer, ReviewSerializer,
                           SignUpSerializer, TitleSerializer, UserSerializer)
-from api_yamdb.settings import DEFAULT_FROM_EMAIL
 
 
 class SignUp(APIView):
