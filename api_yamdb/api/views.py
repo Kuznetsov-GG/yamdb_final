@@ -20,8 +20,6 @@ from .serializers import (CategorySerializer, CodeSerializer,
                           ReadTitleSerializer, ReviewSerializer,
                           SignUpSerializer, TitleSerializer, UserSerializer)
 
-from api_yamdb.settings import DEFAULT_FROM_EMAIL
-
 
 class SignUp(APIView):
     permission_classes = (permissions.AllowAny,)
@@ -39,7 +37,7 @@ class SignUp(APIView):
             send_mail(
                 subject='Приветствуем на API YAMDB!',
                 message=f'Токен для авторизации: {token}',
-                from_email=DEFAULT_FROM_EMAIL,
+                from_email='no-reaply@yamdb.ru',
                 recipient_list=[email]
             )
             return Response(
