@@ -12,7 +12,7 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 DEBUG = strtobool(os.getenv('DEBUG', default='False'))
 
-ALLOWED_HOSTS = ['51.250.28.50']
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', default='localhost').split(', ')
 
 
 INSTALLED_APPS = [
