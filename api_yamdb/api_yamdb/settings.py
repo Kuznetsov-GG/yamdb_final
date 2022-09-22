@@ -1,5 +1,6 @@
 import os
 from datetime import timedelta
+from distutils.util import strtobool
 
 from dotenv import load_dotenv
 
@@ -9,9 +10,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
-DEBUG = True
+DEBUG = strtobool(os.getenv('DEBUG', default='False'))
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', default='localhost').split(', ')
 
 
 INSTALLED_APPS = [
