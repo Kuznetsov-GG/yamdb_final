@@ -5,12 +5,15 @@
 
 #Технологии
 
-Python 3.7, Django 3.2, Django REST Framework, Simple-JWT, SQLite3, GIT, PostgreSQL, Docker, Docker-compose.
+Python 3.7, Django 3.2, Django REST Framework, Simple-JWT, SQLite3, GIT, PostgreSQL, Docker, Docker-compose, nginx.
 
+Адрес сервера с приложением http://51.250.28.50/admin/
+Никнейм Admin
+Пароль Brother777
 
 #API для сервиса YaMDb позволяет:
 
-Ознакомиться с полным функционалом и примерами можно по адресу http://localhost/redoc/ ( Доступно после запуска проекта )
+Ознакомиться с полным функционалом и примерами можно по адресу http://51.250.28.50/redoc/ ( Доступно после запуска проекта )
 
 #Разработчик проекта
 
@@ -31,6 +34,8 @@ POSTGRES_USER=postgres
 POSTGRES_PASSWORD=postgres
 DB_HOST=db
 DB_PORT=5432
+SECRET_KEY=***
+DEBUG=False
 ```
 
 ## Запуск контейнера и приложения в нем
